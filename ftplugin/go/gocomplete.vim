@@ -1,0 +1,1 @@
+/Users/crow/source/go/src/github.com/nsf/gocode/vim/ftplugin/go/gocomplete.vim
