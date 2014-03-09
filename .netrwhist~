@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/crow/work/venus/service/debate-service/src/main/com/hoodinn/debate/service'
 let g:netrw_dirhist_2='/Users/crow/work/venus/service/debate-service/src/main/com/hoodinn/debate/job'
 let g:netrw_dirhist_3='/Users/crow/work/venus/service/debate-service/src/main/com/hoodinn/debate/service'
 let g:netrw_dirhist_4='/Users/crow/work/whisper/dist'
 let g:netrw_dirhist_5='/Users/crow/source/flightgear/flightgear'
+let g:netrw_dirhist_6='/home/wangping'
