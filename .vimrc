@@ -21,11 +21,11 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
+" if has("vms")
 	set nobackup		" do not keep a backup file, use versions instead
-else
-	set backup		" keep a backup file
-endif
+" else
+" 	set backup		" keep a backup file
+" endif
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -208,9 +208,16 @@ let g:tagbar_type_go = {
 execute pathogen#infect()
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 autocmd BufWritePre *.go :silent Fmt
+" vimwiki 配置
+let g:vimwiki_list = [{'path': '~/vimwiki/blog/',
+\ 'path_html': '~/vimwiki/blog/html/',
+\ 'syntax': 'markdown',
+\ 'ext': '.mkd',
+\ 'template_path': '~/vimwiki/blog/',
+\ 'template_default': 'template',
+\ 'template_ext': '.html'}]
+let g:vimwiki_camel_case = 0
+let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'markdown','.mkd':'markdown'}
 
-” vimwiki
-let g:vimwiki_use_mouse = 1
-let g:vimwiki_list = [{'path': 'E:/vimwiki/',
-            \ 'path_html': 'E:/vimwiki/html/',
-            \ 'html_header': 'E:/vimwiki/template/header.tpl',}] 
+map <F8> <Plug>Vimwiki2HTML
+map <S-F8> <Plug>VimwikiAll2HTML
