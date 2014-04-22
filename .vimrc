@@ -102,6 +102,9 @@ endif
 autocmd FileType python set et nu sw=4 ts=4 colorcolumn=79
 autocmd FileType make setlocal noexpandtab
 au BufNewFile,BufRead *.sqc :set ft=c
+au BufNewFile,BufRead *.as :set ft=actionscript
+au BufNewFile,BufRead *.api :set ft=api
+au BufNewFile,BufRead *.mxml :set ft=mxml
 au BufEnter /Users/crow/source/flightgear/* setlocal tags +=/Users/crow/source/flightgear/tags
 au VimEnter /Users/crow/source/flightgear/* cs add /Users/crow/source/flightgear/cscope.out /Users/crow/source/flightgear
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -221,3 +224,17 @@ let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'ma
 
 map <F8> <Plug>Vimwiki2HTML
 map <S-F8> <Plug>VimwikiAll2HTML
+let g:evervim_devtoken='S=s37:U=3bb86e:E=14cdbb6b3b2:C=145840587b6:P=1cd:A=en-devtoken:V=2:H=127021417565af2a90cf211839234291'
+"let g:wrap_toggle = 0
+"func ToggleWrap()
+"  if (wrap_toggle == 0)
+"    :set wrap
+"    set wrap_toggle := 1
+"  else
+"    :set nowrap
+"    set wrap_toggle := 0
+" endif
+"endfunc
+"map <F12>       :call ToggleWrap() <CR><C-W><C-W> :call ToggleWrap() <CR> <C-W><C-W>
+"imap <F12>      <Esc>:call ToggleWrap() <C-W><C-W> :call ToggleWrap() <C-W><C-W> 
+
