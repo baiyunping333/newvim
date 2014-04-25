@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/wangping/.vim/bundle/markdown/syntax'
 let g:netrw_dirhist_2='/home/wangping/shell/doc'
 let g:netrw_dirhist_3='/home/wangping/source/FlashWavRecorder/gradle'
 let g:netrw_dirhist_4='/mnt/24GDisk/work/03code/doc/adminapi'
+let g:netrw_dirhist_5='/etc/ld.so.conf.d'
+let g:netrw_dirhist_6='/etc/network/if-up.d'

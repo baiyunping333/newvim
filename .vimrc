@@ -224,7 +224,7 @@ let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'ma
 
 map <F8> <Plug>Vimwiki2HTML
 map <S-F8> <Plug>VimwikiAll2HTML
-let g:evervim_devtoken='S=s37:U=3bb86e:E=14cdbb6b3b2:C=145840587b6:P=1cd:A=en-devtoken:V=2:H=127021417565af2a90cf211839234291'
+let g:evervim_devtoken='S=s37:U=3bb86e:E=14ce1473ec9:C=145899612c9:P=1cd:A=en-devtoken:V=2:H=f3b560853147285ee304cf798394afae'
 "let g:wrap_toggle = 0
 "func ToggleWrap()
 "  if (wrap_toggle == 0)
