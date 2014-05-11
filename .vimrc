@@ -213,15 +213,15 @@ execute pathogen#infect()
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 autocmd BufWritePre *.go :silent Fmt
 " vimwiki 配置
-let g:vimwiki_list = [{'path': '~/vimwiki/blog/',
-\ 'path_html': '~/vimwiki/blog/html/',
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+\ 'path_html': '~/wiki_html/',
 \ 'syntax': 'markdown',
 \ 'ext': '.mkd',
-\ 'template_path': '~/vimwiki/blog/',
-\ 'template_default': 'template',
+\ 'template_path': '~/vimwiki/template/',
+\ 'template_default': 'default',
 \ 'template_ext': '.html'}]
 let g:vimwiki_camel_case = 0
-let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'markdown','.mkd':'markdown'}
+"let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'markdown','.mkd':'markdown'}
 
 map <F8> <Plug>Vimwiki2HTML
 map <S-F8> <Plug>VimwikiAll2HTML
