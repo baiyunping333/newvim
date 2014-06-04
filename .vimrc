@@ -106,6 +106,8 @@ au BufNewFile,BufRead *.as :set ft=actionscript
 au BufNewFile,BufRead *.api :set ft=api
 au BufNewFile,BufRead *.key :set ft=api
 au BufNewFile,BufRead *.mxml :set ft=mxml
+au BufNewFile,BufRead *.scala :set ft=scala
+au BufNewFile,BufRead *.thrift :set ft=thrift
 au BufEnter /Users/crow/source/flightgear/* setlocal tags +=/Users/crow/source/flightgear/tags
 au VimEnter /Users/crow/source/flightgear/* cs add /Users/crow/source/flightgear/cscope.out /Users/crow/source/flightgear
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
