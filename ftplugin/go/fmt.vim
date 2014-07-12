@@ -57,7 +57,7 @@ function! s:GoFormat()
         endif
         undo
         if !empty(errors)
-            call setqflist(errors, 'r')
+            call setloclist(0, errors, 'r')
         endif
         echohl Error | echomsg "Gofmt returned error" | echohl None
     endif
