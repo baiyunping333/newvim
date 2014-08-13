@@ -214,6 +214,8 @@ let g:tagbar_type_go = {
 execute pathogen#infect()
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 autocmd BufWritePre *.go :silent Fmt
+
+let g:vim_markdown_folding_disabled=1
 " vimwiki 配置
 let g:vimwiki_list = [{'path': '~/vimwiki/',
 \ 'path_html': '~/wiki_html/',
