@@ -100,6 +100,7 @@ if !exists(":DiffOrig")
 				\ | wincmd p | diffthis
 endif
 autocmd FileType python set et nu sw=4 ts=4 colorcolumn=79
+autocmd FileType javascript set et nu sw=4 ts=4 colorcolumn=79
 autocmd FileType make setlocal noexpandtab
 au BufNewFile,BufRead *.sqc :set ft=c
 au BufNewFile,BufRead *.as :set ft=actionscript
@@ -161,7 +162,7 @@ nmap <F3> :NERDTreeToggle<CR>
 au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-let g:pydiction_location = $HOME.'/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_location = '/usr/share/pydiction/complete-dict'
 let g:pyflakes_use_quickfix = 0
 "au VimLeavePre *.py TagbarClose
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
@@ -214,22 +215,21 @@ let g:tagbar_type_go = {
 execute pathogen#infect()
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 autocmd BufWritePre *.go :silent Fmt
-
 let g:vim_markdown_folding_disabled=1
 " vimwiki 配置
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-\ 'path_html': '~/wiki_html/',
-\ 'syntax': 'markdown',
-\ 'ext': '.mkd',
-\ 'template_path': '~/vimwiki/template/',
-\ 'template_default': 'default',
-\ 'template_ext': '.html'}]
-let g:vimwiki_camel_case = 0
+"let g:vimwiki_list = [{'path': '~/vimwiki/',
+"\ 'path_html': '~/wiki_html/',
+"\ 'syntax': 'markdown',
+"\ 'ext': '.mkd',
+"\ 'template_path': '~/vimwiki/template/',
+"\ 'template_default': 'default',
+"\ 'template_ext': '.html'}]
+"let g:vimwiki_camel_case = 0
 "let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'markdown','.mkd':'markdown'}
-let g:vimwiki_customwiki2html=$HOME."/.vim/bundle/vimwiki/autoload/vimwiki/customwiki2html.sh"
-map <F8> <Plug>Vimwiki2HTML
-map <S-F8> <Plug>VimwikiAll2HTML
-let g:evervim_devtoken='S=s37:U=3bb86e:E=14ce1473ec9:C=145899612c9:P=1cd:A=en-devtoken:V=2:H=f3b560853147285ee304cf798394afae'
+"let g:vimwiki_customwiki2html='/home/wangping/.vim/bundle/vimwiki/autoload/vimwiki/customwiki2html.sh'
+"map <F8> <Plug>Vimwiki2HTML
+"map <S-F8> <Plug>VimwikiAll2HTML
+"let g:evervim_devtoken='S=s37:U=3bb86e:E=14ce1473ec9:C=145899612c9:P=1cd:A=en-devtoken:V=2:H=f3b560853147285ee304cf798394afae'
 
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
