@@ -32,9 +32,9 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set bg=dark
 set nu
-set expandtab
 set tabstop=4
 set shiftwidth=4
+set expandtab
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
@@ -109,6 +109,7 @@ au BufNewFile,BufRead *.key :set ft=api
 au BufNewFile,BufRead *.mxml :set ft=mxml
 au BufNewFile,BufRead *.scala :set ft=scala
 au BufNewFile,BufRead *.thrift :set ft=thrift
+" au BufNewFile,BufRead *.json :set ft=javascript
 au BufEnter /Users/crow/source/flightgear/* setlocal tags +=/Users/crow/source/flightgear/tags
 au VimEnter /Users/crow/source/flightgear/* cs add /Users/crow/source/flightgear/cscope.out /Users/crow/source/flightgear
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -237,6 +238,24 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 hi IndentGuidesOdd guibg=red ctermbg=3
 hi IndentGuidesEven guibg=green ctermbg=4
+
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
+
+if !has("gui_running")
+  nmap ^[l <A-l>
+  nmap ^[h <A-h>
+  nmap ^[k <A-k>
+  nmap ^[j <A-j>
+  vmap ^[l <A-l>
+  vmap ^[h <A-h>
+  vmap ^[k <A-k>
+  vmap ^[j <A-j>
+  imap ^[l <A-l>
+  imap ^[h <A-h>
+  imap ^[k <A-k>
+  imap ^[j <A-j>
+endif
+
 "let g:wrap_toggle = 0
 "func ToggleWrap()
 "  if (wrap_toggle == 0)
