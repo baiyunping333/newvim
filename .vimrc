@@ -110,8 +110,8 @@ au BufNewFile,BufRead *.mxml :set ft=mxml
 au BufNewFile,BufRead *.scala :set ft=scala
 au BufNewFile,BufRead *.thrift :set ft=thrift
 " au BufNewFile,BufRead *.json :set ft=javascript
-au BufEnter /Users/crow/source/flightgear/* setlocal tags +=/Users/crow/source/flightgear/tags
-au VimEnter /Users/crow/source/flightgear/* cs add /Users/crow/source/flightgear/cscope.out /Users/crow/source/flightgear
+" au BufEnter /Users/crow/source/flightgear/* setlocal tags +=/Users/crow/source/flightgear/tags
+" au VimEnter /Users/crow/source/flightgear/* cs add /Users/crow/source/flightgear/cscope.out /Users/crow/source/flightgear
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -239,8 +239,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 hi IndentGuidesOdd guibg=red ctermbg=3
 hi IndentGuidesEven guibg=green ctermbg=4
 
-set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
-
 if !has("gui_running")
   nmap ^[l <A-l>
   nmap ^[h <A-h>
@@ -255,6 +253,8 @@ if !has("gui_running")
   imap ^[k <A-k>
   imap ^[j <A-j>
 endif
+
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 
 "let g:wrap_toggle = 0
 "func ToggleWrap()
