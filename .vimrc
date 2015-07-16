@@ -41,6 +41,8 @@ set expandtab
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+let mapleader="," 
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -109,7 +111,7 @@ au BufNewFile,BufRead *.key :set ft=api
 au BufNewFile,BufRead *.mxml :set ft=mxml
 au BufNewFile,BufRead *.scala :set ft=scala
 au BufNewFile,BufRead *.thrift :set ft=thrift
-" au BufNewFile,BufRead *.json :set ft=javascript
+au BufNewFile,BufRead *.json :set ft=javascript
 " au BufEnter /Users/crow/source/flightgear/* setlocal tags +=/Users/crow/source/flightgear/tags
 " au VimEnter /Users/crow/source/flightgear/* cs add /Users/crow/source/flightgear/cscope.out /Users/crow/source/flightgear
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -167,6 +169,11 @@ let g:pydiction_location = '/usr/share/pydiction/complete-dict'
 let g:pyflakes_use_quickfix = 0
 "au VimLeavePre *.py TagbarClose
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
+" autocmd BufWritePre *.json normal m`ggvG:!python -m json.tool<CR>`` " erro 
+
+" format JSON
+vmap <Leader>j :!python -m json.tool<CR>
+nmap <Leader>j <ESC>ggvG:!python -m json.tool<CR>
 
 """""""""""""""""""""""""""""""
 " latex
@@ -268,4 +275,13 @@ set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 "endfunc
 "map <F12>       :call ToggleWrap() <CR><C-W><C-W> :call ToggleWrap() <CR> <C-W><C-W>
 "imap <F12>      <Esc>:call ToggleWrap() <C-W><C-W> :call ToggleWrap() <C-W><C-W> 
+set mouse-=a
+set tags +=/Users/wangping/go/src/TAGS
 
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
