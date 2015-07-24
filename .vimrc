@@ -17,7 +17,11 @@ endif
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'Valloric/YouCompleteMe'
+call vundle#end()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -221,7 +225,9 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
     \ }
 execute pathogen#infect()
+
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+
 autocmd BufWritePre *.go :silent Fmt
 let g:vim_markdown_folding_disabled=1
 " vimwiki 配置
@@ -278,6 +284,7 @@ set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 set mouse-=a
 set tags +=/Users/wangping/go/src/TAGS
 
+
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
@@ -285,3 +292,13 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+let g:jedi#completions_enabled = 1
+"let g:jedi#goto_command = "<leader>d"
+"let g:jedi#goto_assignments_command = "<leader>g"
+"let g:jedi#goto_definitions_command = ""
+"let g:jedi#documentation_command = "K"
+"let g:jedi#usages_command = "<leader>n"
+"let g:jedi#completions_command = "<C-Space>"
+"let g:jedi#rename_command = "<leader>r"
+

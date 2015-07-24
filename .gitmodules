@@ -1,3 +1,9 @@
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = git@github.com:baiyunping333/vimwiki.git
+[submodule "/Users/wangping/.vim/bundle/vundle"]
+	path = /Users/wangping/.vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
